@@ -3,6 +3,9 @@ using JHipsterNet.Core.Pagination;
 using ProcurandoApartamento.Domain.Services.Interfaces;
 using ProcurandoApartamento.Domain.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using LanguageExt;
+using System;
 
 namespace ProcurandoApartamento.Domain.Services
 {
@@ -40,6 +43,32 @@ namespace ProcurandoApartamento.Domain.Services
         {
             await _apartamentoRepository.DeleteByIdAsync(id);
             await _apartamentoRepository.SaveChangesAsync();
+        }
+
+        public virtual async Task<string> FindBestBlock(string[] estabelecimentos)
+        {
+            var result = string.Empty;
+            var apartamentos = await _apartamentoRepository.GetAllAsync();
+            estabelecimentos = estabelecimentos.Select(e => e.ToLower()).ToArray();
+
+            if (estabelecimentos.Count() == 1 )
+            {
+                var estabelecimento = estabelecimentos.First();
+                result = "Quadra " + apartamentos.Where(s => s.ApartamentoDisponivel == true
+                    && s.Estabelecimento.ToLower() == estabelecimento
+                    && s.EstabelecimentoExiste == true).LastOrDefault().Quadra.ToString();
+            }
+            else{
+
+                var disponiveis = apartamentos.Where(s => s.ApartamentoDisponivel == true
+                    && estabelecimentos.Contains(s.Estabelecimento.ToLower())
+                    && s.EstabelecimentoExiste == true)
+                    .OrderBy(s => Array.IndexOf(estabelecimentos, s.Estabelecimento.ToLower())).ToList();
+
+                result = "Quadra " + disponiveis.Where(x => x.Estabelecimento.ToLower() == estabelecimentos.FirstOrDefault()).LastOrDefault().Quadra.ToString();
+            }
+            
+            return result;
         }
     }
 }

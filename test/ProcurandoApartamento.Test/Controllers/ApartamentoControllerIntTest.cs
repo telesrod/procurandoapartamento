@@ -221,5 +221,45 @@ namespace ProcurandoApartamento.Test.Controllers
             apartamento1.Id = 0;
             apartamento1.Should().NotBe(apartamento2);
         }
+
+        [Fact]
+        public async Task GetApartamentoEscolaAcademia()
+        {
+            // Initialize the database
+            await _apartamentoRepository.CreateOrUpdateAsync(_apartamento);
+            await _apartamentoRepository.SaveChangesAsync();
+
+            // Get the apartamento
+            var response = await _client.GetAsync($"/api/apartamentos/melhorApartamento?valores=Escola&valores=Academia");
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        }
+
+        [Fact]
+        public async Task GetApartamentoEscolaMercadoAcademia()
+        {
+            // Initialize the database
+            await _apartamentoRepository.CreateOrUpdateAsync(_apartamento);
+            await _apartamentoRepository.SaveChangesAsync();
+
+            // Get the apartamento
+            var response = await _client.GetAsync($"/api/apartamentos/melhorApartamento?valores=Escola&valores=Mercado&valores=Academia");
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        }
+
+        [Fact]
+        public async Task GetApartamentoMercado()
+        {
+            // Initialize the database
+            await _apartamentoRepository.CreateOrUpdateAsync(_apartamento);
+            await _apartamentoRepository.SaveChangesAsync();
+
+            // Get the apartamento
+            var response = await _client.GetAsync($"/api/apartamentos/melhorApartamento?valores=Mercado");
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        }
+
     }
 }

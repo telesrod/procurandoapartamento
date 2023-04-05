@@ -12,6 +12,8 @@ namespace ProcurandoApartamento.Domain.Services.Interfaces
 
         Task<Apartamento> FindOne(long id);
 
+        Task<string> FindBestBlock(string[] valores);
+
         Task Delete(long id);
     }
 }
