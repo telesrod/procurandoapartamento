@@ -1,66 +1,85 @@
-# Projeto Procurando Apartamento
+## CV
 
-Você provê um serviço por web de busca de apartamentos para locatários. Neste serviço, neste lugar específico da cidade mostrado no mapa abaixo, estão disponíveis diversos apartamentos em cada uma das quadras. As quadras, além de conter os apartamentos, mostram onde a rua começa e onde termina já que a quadra 1 é o início da rua e quadra (n) é mais próximo a seu final. O mapa não determina, porém, o sentido de pedestres e carros já que é mão dupla. É disponibilizada para esse serviço uma tabela da relação de serviços disponíveis em cada uma das quadras: academia, escola e mercado. Os locatários são pessoas muito ocupadas e trabalham remotamente. Assim, é muito importante que eles morem em um lugar com menor deslocamento possível. O serviço deve, com base na indicação do locatário em necessidades de serviços, buscar um apartamento dentro da quadra que proporcione menor deslocamento para seu dia a dia. 
+Rodrigo Angelo Teles
 
-![image](https://user-images.githubusercontent.com/112395489/187196886-8818cda2-395c-4968-8831-645211fb303b.png)
+Data de nascimento: 11/02/1990	Estado Civil: Solteiro
 
-A tabela mostra a relação de “ApartamentosDisponiveis” e os estabelecimentos existentes na quadra. Você deve usá-la para tomar a decisão sobre a melhor escolha de imóvel para seu cliente.
+País: Brasil				Estado: São Paulo
 
-![image](https://user-images.githubusercontent.com/112395489/187196932-38fe6a55-7e7e-4a26-a463-3a3e015335dc.png)
+Cidade: São Paulo			Bairro: Sítio do Mandaqui
 
-A escolha do apartamento vai depender de:
-1.	Ter um apartamento disponível na quadra;
-2.	Andar o mínimo possível para encontrar um estabelecimento de seu interesse;
-3.	A Prioridade de estabelecimentos depende da ordem de entrada de dados. Então se a entrada de dados for ACADEMIA e ESCOLA por exemplo, deve-se priorizar apartamentos mais próximos de ACADEMIAS e depois de ESCOLAS;
-4.	O critério de desempate em caso de mais de uma quadra atender aos requisitos é escolher a quadra mais próxima ao final da rua.  
+CEP: 02542-000			Telefone celular: 11- 97454-4364
 
-## Exemplos:
+E-mail: telesrod@gmail.com		
 
-Considerando os testes abaixo, os resultados seriam os seguintes: 
-
-- ['ACADEMIA', 'MERCADO'] 
-    - O resultado deve ser QUADRA 1, pois na quadra 1 tem apartamento disponível e os dois estabelecimentos de seu interesse;
-
-- ['ACADEMIA'] 
-    - O resultado deve ser QUADRA 2, pois na quadra 2 tem apartamento disponível, tem academia e está mais próximo do final da rua;
-
-## O que entregar:
-1.	Algoritmo de resolução (Novo método no Controller Apartamento) Exemplo a seguir:
-![image](https://user-images.githubusercontent.com/90634328/187257056-3d55d9e0-11c2-416e-9c07-2eba82665fcf.png)
-
-    - A entrada de dados será um Array de String, e o return do Método será uma String. Ex: "Quadra 5";
-    - Qual seria o resultado caso as entradas sejam:
-        - ['ESCOLA', 'ACADEMIA'];
-        - ['ESCOLA', 'MERCADO', 'ACADEMIA'];
+## Formação:
+Superior – Completo (2014)
+	Bacharel em Sistemas de Informação – Anhembi Morumbi 
     
-2.	Criar testes unitários baseado nos exemplos passados;
-![image](https://user-images.githubusercontent.com/90634328/187255894-6ff4700d-0e97-4435-af29-a615925c6d20.png)
+MBA - Completo (2023)
+	Gestão da Qualidade em Tecnologia da Informação - Anhembi Morumbi
+
+## Experiência
+.Net / .Net Core / C#  / Java 
+Microservices, 
+WCF,  MVC , Entity Framework
+MySql , SQL Server ,Dapper
+WebService(Rest/SOAP), API Gateway
+Xml, Json
+
+Web:  Html5, Bootstrap, CSS 3, JavaScript, JQuery
+
+Monitoria: Dynatrace, Grafana
+
+Versionadores:  Azure DevOps  , Git
+
+Metodologias:  SCRUM,  Waterfall, Design Thinking 
+
+Conhecimento em Java Spring boot e NodeJs
+
+## Experiência profissional:
+
+## Banco BS2 - 01/2023 - 04/2023
+
+Desenvolvedor .Net CORE Sênior
+
+Atuação: Atuação em projetos de análise e abertura de contas correntes, integração de sistemas com parceiros externos do banco e manutenção na plataforma de internet banking para clientes PJ.
+
+## Riachuelo - 06/2020 - 01/2023
+
+Analista de Projetos
+
+Atuação: Como gestor de projetos voltado a soluções para o cliente interno nas áreas de Recursos Humanos, Financeira (Midway), Jurídico. 
+Implantação de novas soluções / melhorias / interfaces entre as áreas, com a gestão de fornecedores ou time interno.
+
+## Grupo GBI - 12/2018 -  06/2020
+
+Desenvolvedor .Net Sênior
+
+Atuação: Fábrica de software, alocado na fábrica de software da GOL Linhas Aéreas no aeroporto de Congonhas. Com projetos para o site, e software internos. 
+Projeto concluído: “Site Quito” criação da cultura para o Equador no site ‘https://voegol.com.br’ site e site mobile 
+
+## Resource IT - 07/2018- 11/2018
+
+Desenvolvedor .Net Pleno
+
+Atuação: Fábrica de software, com o projeto de criação da nova versão do sistema de fluxo de caixa do Santander.
+
+## T4W Soluções - 12/2016 - 04/2018
+
+Desenvolvedor .Net; C#
+
+Atuação: Trabalhei como desenvolvedor back end na plataforma de reservas de turismo ‘Cangooroo’, onde era responsável em realizar integrações web services entre as API’s de cliente e da empresa para integrar os produtos solicitados (Hotel, Carro, Pacote, Transfer) para venda na plataforma. Com certificação em ambas as partes referente a validações de preço, regras de cancelamento e disponibilidades. E em dar manutenção em alterações nas API’s e correções de bugs.
+
+## Secunix Information Technology - 01/2014 – 11/2016
+
+Analista de Suporte Infra
+
+Atuação: Responsável em dar manutenção em visitas técnicas aos clientes,  projetar a infra estrutura de clientes, fazer instalação de firewalls, Windows Server ou Samba para rede de dados interna, criação de regras de permissão de usuários, active directory. Realizar monitoramento de servidores e banco de dados de clientes. 
+
+## Idiomas
+
+Inglês: Leitura avançada/ Conversação intermediária.
 
 
-## Instruções Gerais
-- Você deverá fazer:
- - Fork desse projeto em um repositório Privado, no Seu perfil, com o Titulo "Desenvolvedor-Positivo";
-    - ![image](https://user-images.githubusercontent.com/90634328/187271331-e6582814-f28b-47d8-a940-f39d76a1f62d.png)
-    -![image](https://user-images.githubusercontent.com/90634328/187272263-00e338ce-eb0c-474f-ab72-6c730060df56.png)
 
-- Resolvê-lo e subir ao seu repositório Privado
-- Os acessos devem ser dados para os usuários 'jacirpositivo' e 'ctomasini' apenas;
-- O README.md deverá ser o seu curriculo, com a adequada formatação.
-
-## Requisitos de software para executar o projeto
-- net6.0 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
-- Visual Studio 2022 (https://visualstudio.microsoft.com/pt-br/vs/) ou Visual Studio Code (https://code.visualstudio.com/)
-
-## Comandos
-```{.cs}
-dotnet restore ProcurandoApartamento.sln
-```
-```{.cs}
-dotnet build ProcurandoApartamento.sln
-```
-```{.cs}
-dotnet watch run --project src\ProcurandoApartamento\ProcurandoApartamento.csproj
-```
-```{.cs}
-dotnet test test\ProcurandoApartamento.Test\ProcurandoApartamento.Test.csproj
-```
